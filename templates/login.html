@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel='stylesheet' href='./static/test.css'>
+
+</head>
+<body>
+    <header>
+        <h2 class= gallery>Gallery</h2>
+    <nav class= 'navbar'>
+        <ul>
+            <li> <a href='{{url_for('home')}}'>Home</a></li>
+            <li> <a href='{{url_for('login')}}'>Login</a></li>
+            <li> <a href='{{url_for('register')}}'>Register</a></li>
+    </ul>
+</nav>
+</header>
+    <div class="container">
+        <div class = 'login_box'>
+        <h1 class = 'login'>Login</h1>
+        <form method="POST" action="">
+            {{form.hidden_tag()}}
+            <div class="input_box">        
+                {{form.username}}
+            </div>
+            <div class="input_box">
+                {{form.password}}
+            </div>
+            <div class="btn">
+                <button type="submit" class="login_btn">Login</button>
+            </div>
+            <div class="register">
+                Don't have an account? &nbsp; 
+                <a href="{{url_for('register')}}">Sign up</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

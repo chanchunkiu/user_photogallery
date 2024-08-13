@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel='stylesheet' href='./static/test.css'>
+    <link rel='stylesheet' href='./static/style_user.css'>
+</head>
+<body>
+    <header>
+        <h2 class= gallery>Gallery</h2>
+    <nav class ='navbar'>
+        <ul>
+            <li><a href='{{url_for('logout')}}'>Log out</a></li>
+        </nav>
+</header>
+<div class='container'>
+    <div class='gallery'>
+    <h1 class ='gallery_welcome'>Welcome to the Photo Gallery, {{ username }}!</h1>
+    <div class = 'gallery_form'>
+        <form method="post" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+            <div class="form_group">
+                <input type="file" name="uploadFile" multiple="true" id="uploadFile" class="btn_browse" style="display: none;">
+                <label for="uploadFile" class="btn_browse_label">Browse...</label>
+                <input type="submit" class="btn_upload" value="Upload">
+            </div>
+        </form>
+</div>
+<div class="uploaded_images">
+    {% for file in uploaded_files %}
+        {% if file.endswith(('png', 'jpg', 'jpeg')) %}
+            <div class="image_container">
+                <img src="{{ url_for('static', filename='uploads/' ~ current_user.username ~ '/' ~ file) }}" alt="{{ file }}" onerror="this.style.display='none'">
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+</div>
+    </div>
+</div>
+<script>
+
+</script>
+</body>
+</html>

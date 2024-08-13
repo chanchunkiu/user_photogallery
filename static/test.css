@@ -1,0 +1,44 @@
+header{
+    position: fixed;
+    background-color: rgba(29, 28, 28, 0.7);
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 10px 50px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: 99;
+}
+.gallery{
+    font-size: 1.2em;
+    color: white;
+    user-select: none;
+}
+.navbar ul{
+    list-style-type: none;
+    padding:0px;
+    margin: 0px;
+    overflow: hidden; 
+    display: flex;
+
+}
+.navbar a{
+    position: relative;
+    font-size: 0.9em;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display:block;
+    text-align: center;
+
+}
+.navbar a:hover{
+    background-color: #484848;
+
+}
+.navbar li{
+    float:left;
+}
+
