@@ -3,7 +3,7 @@
 This project aims to create a login system for users to host their photos
 the system is build on top of flask, it implement a login authentication system and a image hosting system
 
-installation: flask
+installation: flask,flask_wtf
 
 the home page 
 users can navigate between pages on the navigation bar
