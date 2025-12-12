@@ -3,7 +3,7 @@
 A Flask-based photo gallery application that allows users to register, log in, and upload images to their own personal gallery.
 Includes secure authentication, per-user storage, and a simple, clean interface.
 
-##Features
+## Features
 
 ~ User Authentication (Flask-Login + bcrypt hashing)
 
@@ -22,7 +22,7 @@ Includes secure authentication, per-user storage, and a simple, clean interface.
 ~ Simple, clean UI with multiple views
 
 ## Installation
-###clone
+### clone
 git clone https://github.com/chanchunkiu/user_photogallery.git
 cd user_photogallery
 
@@ -34,7 +34,7 @@ venv\Scripts\activate         # Windows
 ### install libraries
 pip install -r requirements.txt
 
-##run the application
+## run the application
 1. python app.py
 2. http://127.0.0.1:5000/ #run on browser
 
