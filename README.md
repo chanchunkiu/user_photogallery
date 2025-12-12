@@ -1,12 +1,71 @@
 # Photo gallery system
 
-This project aims to create a login system for users to host their photos
-The system is built on top of Flask, which implements a login authentication system and an image hosting system
+A Flask-based photo gallery application that allows users to register, log in, and upload images to their own personal gallery.
+Includes secure authentication, per-user storage, and a simple, clean interface.
 
-installation: flask,flask_wtf
+##Features
 
+~ User Authentication (Flask-Login + bcrypt hashing)
+
+~ Unique user accounts (username cannot repeat)
+
+~Per-user photo gallery
+
+~ Automatic user folder creation
+
+~ Image upload system
+
+~ Password hashing with bcrypt
+
+~ SQLite database (user_data.db)
+
+~ Simple, clean UI with multiple views
+
+## Installation
+###clone
+git clone https://github.com/chanchunkiu/user_photogallery.git
+cd user_photogallery
+
+### virtual environment
+python3 -m venv venv
+source venv/bin/activate      # Mac / Linux
+venv\Scripts\activate         # Windows
+
+### install libraries
+pip install -r requirements.txt
+
+##run the application
+1. python app.py
+2. http://127.0.0.1:5000/ #run on browser
+
+## structure of project
+user_photogallery/
+│
+├── app.py
+├── user_data.db
+├── static/
+│   └── uploads/             # User folders created automatically
+├── templates/
+│   ├── home.html
+│   ├── login.html
+│   ├── register.html
+│   ├── index.html
+│   └── …
+└── README.md
+
+## Security
+1. This project uses Flask login session management
+2. bycrypt for secure password hashing
+3. SQLAlchemy for the User model
+
+Passwords are hashed, not encrypted, which means even database is leaked, passwords would not be exposed.
+<img width="680" height="246" alt="image" src="https://github.com/user-attachments/assets/b2f80d8d-5e6b-45f5-977e-38ecf307300c" />
+
+
+
+Database leaks do not expose real passwords
 ## The home page 
-users can navigate between pages on the navigation bar
+Users can navigate between pages on the navigation bar
 ![image](https://github.com/user-attachments/assets/9669b01f-bd78-4248-8a42-f6b521b2b1e1)
 
 ## the login page
@@ -16,12 +75,6 @@ Users can log in with their username and password
 ## the registration page
 New users can sign up to use the photo hosting service 
 ![image](https://github.com/user-attachments/assets/14f7d7dc-efab-4eb4-a62f-a3e48a83a940)
-
-## database
-Users' login usernames and passwords are hashed in the database
-<img width="680" height="246" alt="image" src="https://github.com/user-attachments/assets/b2f80d8d-5e6b-45f5-977e-38ecf307300c" />
-
-
 
 ## users' photo profile
 after login, the website will greet the users and also show the currently uploaded photos in the gallery. 
