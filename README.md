@@ -34,7 +34,7 @@ venv\Scripts\activate         # Windows
 ### install libraries
 pip install -r requirements.txt
 
-## run the application
+## Run the application
 1. python app.py
 2. http://127.0.0.1:5000/ #run on browser
 
