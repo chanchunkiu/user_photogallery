@@ -38,21 +38,6 @@ pip install -r requirements.txt
 1. python app.py
 2. http://127.0.0.1:5000/ #run on browser
 
-## structure of project
-user_photogallery/
-│
-├── app.py
-├── user_data.db
-├── static/
-│   └── uploads/             # User folders created automatically
-├── templates/
-│   ├── home.html
-│   ├── login.html
-│   ├── register.html
-│   ├── index.html
-│   └── …
-└── README.md
-
 ## Security
 1. This project uses Flask login session management
 2. bycrypt for secure password hashing
