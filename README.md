@@ -5,17 +5,21 @@ the system is build on top of flask, it implement a login authentication system 
 
 installation: flask,flask_wtf
 
-the home page 
+# the home page 
 users can navigate between pages on the navigation bar
 ![image](https://github.com/user-attachments/assets/9669b01f-bd78-4248-8a42-f6b521b2b1e1)
 
-the login page
+# the login page
 users can login with their username and password
 ![image](https://github.com/user-attachments/assets/7b658715-e2ab-4ce5-b968-5a5cb36d4856)
 
-the registration page
+# the registration page
 new useres can sign up to use the photo hosting service 
 ![image](https://github.com/user-attachments/assets/14f7d7dc-efab-4eb4-a62f-a3e48a83a940)
+
+# data base
+users login username's password are hashed in the database
+
 
 
 after login, the website will greats the users and also shows the currently uploaded photos in the gallery. 
